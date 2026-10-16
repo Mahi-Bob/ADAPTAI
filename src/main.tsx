@@ -5,6 +5,7 @@ import App from './App'
 import { AuthProvider } from './services/AuthProvider'
 import './styles.css'
 import './redesign.css'
+import './theme-dark.css'
 
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {

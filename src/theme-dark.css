@@ -1,0 +1,116 @@
+.app-layout[data-theme='dark'] {
+  --dark-page: #0f1420;
+  --dark-surface: #171e2c;
+  --dark-surface-raised: #1c2535;
+  --dark-text: #edf0f7;
+  --dark-muted: #a0a9bb;
+  --dark-line: #30394a;
+  background: var(--dark-page);
+  color: var(--dark-text);
+  color-scheme: dark;
+}
+
+.app-layout[data-theme='dark'] .app-sidebar {
+  background: #0a0e18;
+  box-shadow: 10px 0 32px rgb(0 0 0 / 22%);
+}
+
+.app-layout[data-theme='dark'] .app-main,
+.app-layout[data-theme='dark'] .app-content {
+  background: var(--dark-page);
+  color: var(--dark-text);
+}
+
+.app-layout[data-theme='dark'] .app-topbar {
+  border-color: var(--dark-line);
+  background: rgb(19 25 37 / 96%);
+  box-shadow: 0 3px 14px rgb(0 0 0 / 12%);
+}
+
+.app-layout[data-theme='dark'] .app-footer {
+  border-color: var(--dark-line);
+  color: var(--dark-muted);
+}
+
+.app-layout[data-theme='dark'] :is(.page-title h1, .app-card h2, .app-card h3, .kpi-card > b, .record-modal h2, .settings-card h2, .readonly-setting b, .data-table td, .data-table th, .chart-summary b, .legend-list b, .account-dropdown b, .record-field, .breadcrumb b) {
+  color: var(--dark-text);
+}
+
+.app-layout[data-theme='dark'] :is(.page-title p, .app-card p, .kpi-card > small, .kpi-top, .app-card-heading p, .app-footer, .readonly-setting, .legend-list span, .table-foot, .record-toolbar, .record-count, .settings-heading p, .privacy-item p, .account-dropdown > span, .app-card .chart-summary > span) {
+  color: var(--dark-muted);
+}
+
+.app-layout[data-theme='dark'] :is(.app-card, .kpi-card, .account-dropdown, .record-modal, .empty-state) {
+  border-color: var(--dark-line);
+  background: var(--dark-surface);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 16%);
+}
+
+.app-layout[data-theme='dark'] :is(.records-card, .settings-card, .sales-card, .breakdown-card) {
+  color: var(--dark-text);
+}
+
+.app-layout[data-theme='dark'] :is(.workspace-switch, .top-search, .record-search, .filter-select, .select-button, .more-button, .account-dropdown button, .record-field input:not([type='checkbox']), .record-field select, .record-field textarea, .app-card input:not([type='checkbox']), .app-card select, .app-card textarea) {
+  border-color: var(--dark-line);
+  background-color: var(--dark-surface-raised);
+  color: var(--dark-text);
+}
+
+.app-layout[data-theme='dark'] input::placeholder,
+.app-layout[data-theme='dark'] textarea::placeholder {
+  color: #8490a5;
+}
+
+.app-layout[data-theme='dark'] .data-table thead {
+  background: #1c2535;
+}
+
+.app-layout[data-theme='dark'] .data-table :is(th, td),
+.app-layout[data-theme='dark'] .data-table tr,
+.app-layout[data-theme='dark'] .table-foot,
+.app-layout[data-theme='dark'] .readonly-setting,
+.app-layout[data-theme='dark'] .privacy-item,
+.app-layout[data-theme='dark'] .settings-heading {
+  border-color: var(--dark-line);
+}
+
+.app-layout[data-theme='dark'] .data-table tbody tr:hover {
+  background: #202a3b;
+}
+
+.app-layout[data-theme='dark'] .sample-banner {
+  border-color: #343551;
+  background: #1b1d32;
+  color: #d4d3f4;
+}
+
+.app-layout[data-theme='dark'] .form-message {
+  border-color: #613b45;
+  background: #2a1c25;
+  color: #ffaaa8;
+}
+
+.app-layout[data-theme='dark'] .success-message {
+  border-color: #285743;
+  background: #172a25;
+  color: #9cdbb8;
+}
+
+.app-layout[data-theme='dark'] .button-secondary {
+  border-color: var(--dark-line);
+  background: var(--dark-surface-raised);
+  color: var(--dark-text);
+}
+
+.app-layout[data-theme='dark'] .button-secondary:hover,
+.app-layout[data-theme='dark'] .account-dropdown button:hover {
+  background: #273247;
+}
+
+.app-layout[data-theme='dark'] .theme-toggle {
+  color: #e6e9f3;
+}
+
+.app-layout[data-theme='dark'] .theme-toggle:hover {
+  background: rgb(255 255 255 / 10%);
+}
