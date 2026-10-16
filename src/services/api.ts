@@ -155,14 +155,22 @@ export async function previewSpreadsheet(file: File, worksheet?: string): Promis
 
 export async function generateConfiguration(input: GenerateConfigurationInput): Promise<BusinessConfig> {
   let response: Response
+  const controller = new AbortController()
+  const timeout = window.setTimeout(() => controller.abort(), 20_000)
   try {
     response = await fetch(apiRouteUrl('/configurations/generate'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(input),
+      signal: controller.signal,
     })
-  } catch {
-    throw new ConfigurationRequestError('Could not reach the AdaptAI server. Check that it is running and try again.', 0)
+  } catch (error) {
+    const message = error instanceof DOMException && error.name === 'AbortError'
+      ? 'AI generation took too long.'
+      : 'Could not reach the AdaptAI server.'
+    throw new ConfigurationRequestError(`${message} You can use an industry template instead.`, 0)
+  } finally {
+    window.clearTimeout(timeout)
   }
   const body = await response.json().catch(() => null) as { error?: string } | null
   if (!response.ok) {

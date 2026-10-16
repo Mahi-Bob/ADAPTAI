@@ -399,6 +399,16 @@ textarea {
   letter-spacing: -.5px;
 }
 
+.setup-generation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.setup-generation-actions .setup-button {
+  margin-top: 15px;
+}
+
 .stepper-item span {
   box-shadow: 0 0 0 4px #f7f7fb;
 }
