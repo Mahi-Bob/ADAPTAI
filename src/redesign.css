@@ -409,6 +409,17 @@ textarea {
   margin-top: 15px;
 }
 
+.setup-fallback-notice {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border: 1px solid #d9e3ff;
+  border-radius: 10px;
+  background: #f5f7ff;
+  color: #40517d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .stepper-item span {
   box-shadow: 0 0 0 4px #f7f7fb;
 }
