@@ -142,6 +142,8 @@ function VerifyEmailPage() {
   const [busy, setBusy] = useState(false)
   const [cooldown, setCooldown] = useState(0)
   const navigate = useNavigate()
+  const { user, loading } = useAuth()
+  useEffect(() => { if (!loading && user) navigate('/app/dashboard', { replace: true }) }, [loading, user, navigate])
   useEffect(() => { if (cooldown > 0) { const timer = window.setTimeout(() => setCooldown(cooldown - 1), 1000); return () => window.clearTimeout(timer) } }, [cooldown])
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); if (!supabase || !email) { setMessage('Signup session is missing. Please register again.'); return }
