@@ -1206,3 +1206,55 @@ html[data-theme='dark'] .setup-review-card .setup-fallback-notice {
   background: #2a2419;
   color: #f1d596;
 }
+
+/* Apply the selected theme to the full public experience as well as the app. */
+html[data-theme='dark'] :is(.industries-section, .product-showcase, .how-section, .public-page, .auth-main, .setup-page, .setup-main, .auth-loading) {
+  background: #0f1420;
+  color: #edf0f7;
+}
+
+html[data-theme='dark'] :is(.industry-card, .step-card, .feature-card, .template-card, .price-card, .proposal-card, .workflow-form, .setup-card, .faq-section details, .auth-form, .auth-loading > div) {
+  border-color: #30394a;
+  background: #171e2c;
+  color: #edf0f7;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 16%);
+}
+
+html[data-theme='dark'] :is(.industry-card h3, .step-card h3, .feature-card h3, .template-card h3, .price-card h3, .proposal-card h3, .workflow-form h3, .faq-section summary, .auth-form label, .setup-card label, .industry-card-title) {
+  color: #edf0f7;
+}
+
+html[data-theme='dark'] :is(.industry-card p, .step-card p, .feature-card p, .template-card p, .price-card p, .proposal-card p, .faq-section details p, .auth-form small, .auth-form label small) {
+  color: #a0a9bb;
+}
+
+html[data-theme='dark'] :is(.how-section, .industry-icon, .step-icon, .feature-icon, .template-icon, .price-card ul li, .workflow-step, .template-modules span) {
+  background-color: #1c2535;
+}
+
+html[data-theme='dark'] :is(.industry-card, .step-card, .feature-card, .template-card, .price-card, .proposal-card, .workflow-form, .setup-card, .faq-section details) {
+  border-color: #30394a;
+}
+
+html[data-theme='dark'] :is(.industries-section .section-heading h2, .how-section .section-heading h2, .product-showcase .showcase-copy h2, .public-page-heading h1, .setup-heading h1, .auth-form h2) {
+  color: #edf0f7;
+}
+
+html[data-theme='dark'] :is(.industries-section .section-heading > p, .how-section .section-heading > p, .product-showcase .showcase-copy > p, .public-page-heading > p, .setup-heading > p) {
+  color: #a0a9bb;
+}
+
+html[data-theme='dark'] .auth-demo-notice {
+  border-color: #5a4929;
+  background: #2a2419;
+  color: #f1d596;
+}
+
+html[data-theme='dark'] :is(.industry-icon, .step-icon, .feature-icon) {
+  color: #c5b8ff;
+}
+
+html[data-theme='dark'] :is(.industry-card:hover, .feature-card:hover, .template-card:hover, .price-card:hover) {
+  border-color: #514875;
+  box-shadow: 0 18px 38px rgb(0 0 0 / 28%);
+}
