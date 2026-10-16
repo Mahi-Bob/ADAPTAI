@@ -1,0 +1,27 @@
+.import-card{padding:22px;display:grid;gap:22px}
+.import-options{display:grid;grid-template-columns:1fr 1.4fr;gap:18px}
+.import-card .record-field{margin:0}
+.import-meta{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:#fbfcff;color:#6251c8}
+.import-meta span{display:grid;gap:4px}
+.import-meta b{font-size:12px;color:var(--ink)}
+.import-meta small{font-size:10px;color:var(--muted)}
+.import-step{display:grid;gap:12px}
+.import-step h2{font-family:Manrope,sans-serif;font-size:15px;letter-spacing:-.3px;margin:0;color:var(--ink)}
+.import-step>p,.import-step .table-scroll>p{font-size:11px;line-height:1.6;color:var(--muted);margin:0}
+.import-mapping{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.import-mapping label{display:grid;gap:6px;font-size:10px;font-weight:700;color:#566176}
+.import-mapping select,.import-card select,.import-card input[type=file]{width:100%;min-height:39px;padding:8px 10px;border:1px solid #e2e6ef;border-radius:7px;background:#fff;color:#303a4e;font-size:11px}
+.import-counts{display:flex;flex-wrap:wrap;gap:10px}
+.import-counts span{padding:8px 11px;border-radius:7px;background:#f3f5fa;font-size:10px;color:#637087}
+.import-counts b{font-size:13px;color:#273149;margin-right:3px}
+.import-card .table-scroll{max-width:100%;overflow:auto}
+.import-card .table-scroll .data-table{min-width:440px}
+.import-card .data-table th,.import-card .data-table td{padding:9px 11px}
+.import-confirm{display:flex;align-items:flex-start;gap:9px;font-size:11px;line-height:1.5;color:#515d73}
+.import-confirm input{margin:2px 0 0;accent-color:#7455f6}
+.import-card>.button{justify-self:start}
+.import-card .empty-state{padding:22px}
+.import-loading{padding:12px;border-radius:8px;background:#f3f5fa;color:#566176;font-size:11px}
+.success-message a{margin-left:6px;font-weight:700;text-decoration:underline}
+@media(max-width:700px){.import-options{grid-template-columns:1fr;gap:12px}.import-mapping{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:440px){.import-card{padding:14px;gap:17px}.import-mapping{grid-template-columns:1fr}.import-card>.button{width:100%}}
