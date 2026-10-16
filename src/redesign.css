@@ -1,13 +1,22 @@
 :root {
-  --navy: #171a2c;
-  --navy-soft: #22253b;
-  --purple: #6558d3;
+  color-scheme: light;
+  --navy: #111827;
+  --navy-soft: #1e293b;
+  --purple: #7057e8;
   --blue: #5275d8;
-  --ink: #22263a;
-  --muted: #72788b;
-  --line: #e7e9f0;
+  --ink: #182033;
+  --muted: #667085;
+  --line: #e4e7ef;
   --paper: #fff;
-  --light: #f5f6fa;
+  --light: #f7f8fc;
+  --success: #16845b;
+  --warning: #b76b0a;
+  --danger: #c43f4f;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --control-height: 44px;
+  --transition-fast: 160ms ease;
   --surface-shadow: 0 12px 32px rgb(31 38 69 / 5%);
   --surface-shadow-hover: 0 18px 38px rgb(31 38 69 / 9%);
 }
@@ -449,6 +458,88 @@ textarea {
   backdrop-filter: blur(3px);
 }
 
+.button {
+  min-height: var(--control-height);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.app-card,
+.kpi-card {
+  border-color: var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.data-table th,
+.data-table td {
+  line-height: 1.5;
+}
+
+.industry-card,
+.feature-card,
+.template-card,
+.price-card {
+  border-radius: var(--radius-lg);
+}
+
+.mobile-menu {
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.mobile-menu:focus-visible,
+.industry-card:focus-visible {
+  outline-color: #a99cff;
+}
+
+.public-links a,
+.nav-actions a,
+.footer a {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.capability-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.capability-strip > div {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 11px;
+  color: var(--purple);
+}
+
+.capability-strip span {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.capability-strip b {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.capability-strip small {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
 @media (max-width: 1050px) {
   .app-content {
     padding: 28px 24px 36px;
@@ -464,8 +555,18 @@ textarea {
 }
 
 @media (max-width: 760px) {
+  .mobile-menu {
+    display: inline-flex;
+  }
+
   .app-content {
     padding: 22px 16px 30px;
+  }
+
+  .capability-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 12px;
+    padding: 21px 5%;
   }
 
   .app-topbar {
@@ -570,6 +671,19 @@ textarea {
 }
 
 @media (max-width: 480px) {
+  .capability-strip {
+    gap: 13px 9px;
+    padding-inline: 5%;
+  }
+
+  .capability-strip b {
+    font-size: 10px;
+  }
+
+  .capability-strip small {
+    font-size: 9px;
+  }
+
   .app-topbar {
     flex-wrap: wrap;
     padding-block: 10px;

@@ -56,6 +56,41 @@
   color: var(--dark-text);
 }
 
+.app-layout[data-theme='dark'] :is(.import-meta, .import-loading, .import-counts span) {
+  border-color: var(--dark-line);
+  background: var(--dark-surface-raised);
+  color: var(--dark-muted);
+}
+
+.app-layout[data-theme='dark'] :is(.import-meta b, .import-step h2, .import-counts b) {
+  color: var(--dark-text);
+}
+
+.app-layout[data-theme='dark'] :is(.import-meta small, .import-step > p, .import-step .table-scroll > p, .import-mapping label, .import-confirm) {
+  color: var(--dark-muted);
+}
+
+.app-layout[data-theme='dark'] :is(.import-mapping select, .import-card select, .import-card input[type='file']) {
+  border-color: var(--dark-line);
+  background: var(--dark-surface-raised);
+  color: var(--dark-text);
+}
+
+.app-layout[data-theme='dark'] .status-pill {
+  background: #17382f;
+  color: #a0dec1;
+}
+
+.app-layout[data-theme='dark'] .status-warning {
+  background: #3c2d1a;
+  color: #f1c783;
+}
+
+.app-layout[data-theme='dark'] .status-neutral {
+  background: #30394a;
+  color: #c0c8d6;
+}
+
 .app-layout[data-theme='dark'] input::placeholder,
 .app-layout[data-theme='dark'] textarea::placeholder {
   color: #8490a5;
