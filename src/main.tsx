@@ -6,6 +6,14 @@ import { AuthProvider } from './services/AuthProvider'
 import './styles.css'
 import './redesign.css'
 
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  window.addEventListener('load', () => {
+    void navigator.serviceWorker.register('/sw.js').catch((error: unknown) => {
+      console.warn('AdaptAI could not register its offline app shell.', error)
+    })
+  })
+}
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>

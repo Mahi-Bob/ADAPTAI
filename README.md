@@ -31,6 +31,16 @@ The migration should be reviewed and applied to the intended Supabase project. D
 
 Create a production build with `npm run build`.
 
+## Install AdaptAI as an app
+
+The Vercel deployment can be installed as a Progressive Web App (PWA) from a supported browser:
+
+- **Android:** open the site in Chrome, open the browser menu, then choose **Install app** or **Add to Home screen**.
+- **iPhone/iPad:** open the site in Safari, tap **Share**, then **Add to Home Screen**.
+- **Windows:** open the site in Edge or Chrome and choose **Install AdaptAI** from the address bar or browser menu.
+
+The app shell and static assets can be cached for offline launch, but sign-in, AI generation, spreadsheet preview, and cloud workspace data still require an internet connection. The service worker does not cache API responses or Supabase data.
+
 ## Workspace data and demo behavior
 
 Retail, healthcare, warehouse and hospitality workspaces use shared configuration-driven forms, tables and navigation. The setup wizard sends generation requests to the Node API and validates the returned configuration in the browser before saving it.
