@@ -215,6 +215,28 @@ textarea {
   margin-top: 5px;
 }
 
+.import-file-field {
+  align-content: start;
+  gap: 8px;
+}
+
+.import-file-field > small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.import-card input[type='file']::file-selector-button {
+  min-height: 30px;
+  margin-right: 10px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--light);
+  color: var(--ink);
+  cursor: pointer;
+}
+
 .kpi-grid {
   gap: 16px;
   margin-block: 22px;

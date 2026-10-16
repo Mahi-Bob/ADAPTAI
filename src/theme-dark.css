@@ -91,6 +91,12 @@
   color: #c0c8d6;
 }
 
+.app-layout[data-theme='dark'] .import-card input[type='file']::file-selector-button {
+  border-color: var(--dark-line);
+  background: #273247;
+  color: var(--dark-text);
+}
+
 .app-layout[data-theme='dark'] input::placeholder,
 .app-layout[data-theme='dark'] textarea::placeholder {
   color: #8490a5;
