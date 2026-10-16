@@ -1,5 +1,5 @@
-const SHELL_CACHE = 'adaptai-shell-v1'
-const STATIC_CACHE = 'adaptai-static-v1'
+const SHELL_CACHE = 'adaptai-shell-v2'
+const STATIC_CACHE = 'adaptai-static-v2'
 const APP_SHELL = ['/', '/offline.html', '/manifest.webmanifest', '/icons/adaptai.svg', '/icons/adaptai-192.png', '/icons/adaptai-512.png']
 
 self.addEventListener('install', (event) => {
