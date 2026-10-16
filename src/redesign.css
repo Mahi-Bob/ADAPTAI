@@ -1116,3 +1116,93 @@ textarea {
     transition-duration: .01ms !important;
   }
 }
+
+.public-theme-toggle {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: var(--radius-sm);
+  background: rgb(255 255 255 / 5%);
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.public-theme-toggle:hover {
+  background: rgb(255 255 255 / 12%);
+}
+
+.public-theme-toggle:focus-visible {
+  outline-color: #a99cff;
+}
+
+html[data-theme='dark'] body {
+  background: #0f1420;
+  color: #edf0f7;
+}
+
+html[data-theme='dark'] :is(.capability-strip, .industries-section, .how-section, .public-page, .auth-main, .setup-page, .setup-main) {
+  background: #0f1420;
+  color: #edf0f7;
+}
+
+html[data-theme='dark'] :is(.capability-strip b, .section-heading h2, .showcase-copy h2, .public-page-heading h1, .auth-form h2, .setup-heading h1, .setup-card h2) {
+  color: #edf0f7;
+}
+
+html[data-theme='dark'] :is(.capability-strip small, .section-heading > p, .showcase-copy > p, .public-page-heading > p, .auth-form > p, .setup-heading > p, .setup-card > p) {
+  color: #a0a9bb;
+}
+
+html[data-theme='dark'] :is(.capability-strip, .industry-card, .step-card, .feature-card, .template-card, .price-card, .setup-card, .workflow-form, .proposal-card, .faq-section details) {
+  border-color: #30394a;
+  background-color: #171e2c;
+}
+
+html[data-theme='dark'] .setup-review-card .review-block {
+  border-color: #30394a;
+  background: #1c2535;
+}
+
+html[data-theme='dark'] .setup-review-card :is(.review-block h3, .review-entity > b) {
+  color: #edf0f7;
+}
+
+html[data-theme='dark'] .setup-review-card .review-entity > span {
+  color: #a0a9bb;
+}
+
+html[data-theme='dark'] .setup-review-card .review-entity,
+html[data-theme='dark'] .setup-review-card .review-actions {
+  border-color: #30394a;
+}
+
+html[data-theme='dark'] .setup-review-card .review-modules > span {
+  border-color: #38344f;
+  background: #24223a;
+  color: #d8d2ff;
+}
+
+html[data-theme='dark'] :is(.auth-form input, .setup-card input, .setup-card textarea, .setup-card select, .workflow-form textarea, .workflow-form select) {
+  border-color: #30394a;
+  background: #1c2535;
+  color: #edf0f7;
+}
+
+html[data-theme='dark'] :is(.auth-form > label, .setup-card > label, .workflow-form > label) {
+  color: #d6dbe6;
+}
+
+html[data-theme='dark'] .button-secondary {
+  border-color: #30394a;
+  background: #1c2535;
+  color: #edf0f7;
+}
+
+html[data-theme='dark'] .setup-review-card .setup-fallback-notice {
+  border-color: #5a4929;
+  background: #2a2419;
+  color: #f1d596;
+}
