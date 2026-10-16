@@ -170,6 +170,51 @@ textarea {
   box-shadow: var(--surface-shadow);
 }
 
+.data-loading {
+  margin-bottom: 18px;
+  padding: 13px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dashboard-empty {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  box-shadow: var(--surface-shadow);
+  text-align: left;
+}
+
+.dashboard-empty .industry-icon {
+  margin: 0;
+}
+
+.dashboard-empty h3,
+.dashboard-empty p {
+  margin: 0;
+}
+
+.dashboard-empty p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.dashboard-empty > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+}
+
 .kpi-grid {
   gap: 16px;
   margin-block: 22px;
@@ -527,7 +572,12 @@ textarea {
 .sidebar-collapsed .app-logo {
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 4px;
+}
+
+.sidebar-collapsed .sidebar-collapse {
+  width: 24px;
+  height: 24px;
 }
 
 .sidebar-collapsed .app-logo .brand > span:last-child,

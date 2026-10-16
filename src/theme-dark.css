@@ -149,3 +149,17 @@
 .app-layout[data-theme='dark'] .theme-toggle:hover {
   background: rgb(255 255 255 / 10%);
 }
+
+.app-layout[data-theme='dark'] :is(.data-loading, .dashboard-empty) {
+  border-color: var(--dark-line);
+  background: var(--dark-surface);
+  color: var(--dark-muted);
+}
+
+.app-layout[data-theme='dark'] .dashboard-empty h3 {
+  color: var(--dark-text);
+}
+
+.app-layout[data-theme='dark'] .sidebar-collapse {
+  border-color: var(--dark-line);
+}
